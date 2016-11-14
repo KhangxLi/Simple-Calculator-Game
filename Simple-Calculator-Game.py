@@ -1,5 +1,6 @@
 running = True
 choosing = True
+#Change to master test
 def operation(woperator, soperator):
     '''Lets the user do an operation that will result in 69'''
     print("\n", woperator)
