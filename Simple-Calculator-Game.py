@@ -1,7 +1,7 @@
 import sys
 running = True
 choosing = True
-
+#def-functions branch
 def quitting(funstring, woperator, soperator):
     '''When they want to quit'''
     print("Are you sure? 'yes' or 'no'")
