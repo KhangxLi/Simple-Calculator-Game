@@ -1,7 +1,7 @@
 import sys
 running = True
 choosing = True
-#problems: have to back twice after using again
+#problems: have to back twice after using again Change to def-functions test
 def quitting(funstring, woperator, soperator):
     '''When they want to quit'''
     print("Are you sure? 'yes' or 'no'")
