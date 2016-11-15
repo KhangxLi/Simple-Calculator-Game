@@ -29,6 +29,7 @@ def after_operation(woperator, soperator):
             quitting('Why are you like this?', woperator, soperator)
         elif cmd == 'again':
             operation(woperator, soperator)
+            break
         elif cmd == 'hack':
             print(' El Psy Congroo' * 100000)
         else:
