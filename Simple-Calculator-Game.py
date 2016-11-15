@@ -27,6 +27,7 @@ def after_operation(woperator, soperator):
             break
         elif cmd == 'quit':
             quitting('Why are you like this?', woperator, soperator)
+            break
         elif cmd == 'again':
             operation(woperator, soperator)
             break
@@ -42,14 +43,14 @@ def operation(woperator, soperator):
     try: 
         first = float(input("Enter first number :"))
         second = float(input("Enter second number :"))
-        result = 69
+        result = 69.0
         print('\n', first, soperator, second, '=', result, '\n')
         after_operation(woperator, soperator)
     except ValueError:
         print("Is that a number... Suit yourself...\n")
         first = str(input("Enter first number :"))
         second = str(input("Enter second number :"))
-        result = 69
+        result = 69.0
         print('\n', first, soperator, second, '=', result, '\n')
         after_operation(woperator, soperator)
 
