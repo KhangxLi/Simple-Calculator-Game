@@ -1,5 +1,6 @@
 # Simple Calculator Game -The Black Box
 ## A game with no instructions, disguised as a simple calculator program.
+## For novice programmers: Try to recreate the program without looking at the code.
 This is TheKhangx's first attempt at creating a program. The program is still in its very early version and is not a game yet.
 Language used at this point: Python
 
