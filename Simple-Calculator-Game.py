@@ -1,77 +1,108 @@
+import sys
 running = True
 choosing = True
-# master branch
+
+def main_menu():
+    '''Main menu options.'''
+    while running:
+        print("\nChoose your desired operation:")
+        print("\nEnter '1' = Addition")
+        print("Enter '2' = Substraction")
+        print("Enter '3' = Multiplication")
+        print("Enter '4' = Division")
+        print("Enter 'quit' = quit\n")
+        cmd = str(input("Enter command : "))
+        if cmd == '1':
+            operation('Addition', '+')
+        elif cmd == '2':
+            operation('Substraction', '-')
+        elif cmd == '3':
+            operation('Multiplication', '*')
+        elif cmd == '4':
+            operation('Division', '/')
+        elif cmd == 'quit':
+            mainmenu_quit()
+        elif cmd == 'hack':
+            steinsgate()
+        else:
+            print('\n', "'", cmd, "'", "is not an option. But that's cool, you're thinking outside of the box\n")
+
+def mainmenu_quit():
+    '''When quitting at the main menu.'''
+    print("Are you sure? 'yes' or 'no'")
+    cmd = str(input("\nEnter command : "))
+    if cmd == 'yes':
+        print('Quit!' * 500000)
+        sys.exit(0)
+    elif cmd == 'no':
+        print('\n What would you like to do?')
+        main_menu()
+    elif cmd == 'hack':
+        steinsgate()
+    else:
+        print('\n', "'", cmd, "'", 'is not an option. Here are your choices:', '\n')
+        main_menu()
+
 def operation(woperator, soperator):
-    '''Lets the user do an operation that will result in 69'''
+    '''Lets the user do an operation that will result in 69. Humour > 9000.'''
     print("\n", woperator)
-    try: 
+    try:
         first = float(input("Enter first number :"))
         second = float(input("Enter second number :"))
-        result = 69
+        result = 69.0
         print('\n', first, soperator, second, '=', result, '\n')
-        print("Enter 'again' = Another", woperator)
-        print("Enter 'back' for Menu")
-        print("Enter 'quit' to quit\n")
+        after_operation(woperator, soperator)
     except ValueError:
-        print("Is that a number... Doesn't matter, it should still work:\n")
+        print("Is that a number? Suit yourself...\n")
         first = str(input("Enter first number :"))
         second = str(input("Enter second number :"))
-        result = 69
+        result = 69.0
         print('\n', first, soperator, second, '=', result, '\n')
+        after_operation(woperator, soperator)
+
+def after_operation(woperator, soperator):
+    '''Options after the operation.'''
+    while choosing:
         print("Enter 'again' = Another", woperator)
         print("Enter 'back' for Menu")
         print("Enter 'quit' to quit\n")
-
-print('WELCOME TO SIMPLE CALCULATOR \nPlease have fun with this SIMPLE CALCULATOR.')
-while running:
-    print("\nEnter 1 = Addition")
-    print("Enter 2 = Substraction")
-    print("Enter 3 = Multiplication")
-    print("Enter 4 = Division")
-    print("Enter 'quit' = quit\n")
-    cmd = str(input("Enter command : "))
-    if cmd == '1':
-        operation('Addition', '+') 
         cmd = str(input("Enter command : "))
         if cmd == 'back':
-            continue
-        elif cmd == 'again':
-            operation('Addition', '+')
+            break
         elif cmd == 'quit':
-            print("\nQuit?")
-            print("Are you sure? 'yes' or 'no'")
-            cmd = str(input("\nEnter command : "))
-            if cmd == 'yes':
-                print('Quit!' * 500000)
-                running = False
-            elif cmd == 'no':
-                continue    
-            elif cmd == 'hack':
-                print(' El Psy Congroo' * 100000)
-            else:
-                print('\n', "'",cmd,"'", 'is not an option. Why are you like this?\n')
+            quitting(woperator, soperator)
+            break
+        elif cmd == 'again':
+            operation(woperator, soperator)
+            break
         elif cmd == 'hack':
-            print(' El Psy Congroo' * 100000)
+            steinsgate()
         else:
-            print("\n", "'",cmd,"'", "is not an option. Are you iliterate? Here's the menu.  \n")
+            print("\n", "'", cmd, "'", "is not an option. Are you iliterate? Here's the menu.  \n")
+            break
+        #I do know how to write illiterate.
 
-    elif (cmd == '2') or (cmd == '3') or (cmd == '4'):
-        print('This module is not ready yet. Please choose another option.')
-
-    elif cmd == 'quit':
-        print("\nQuit?")
-        print("Are you sure? 'yes' or 'no'")
-        cmd = str(input("\nEnter command : "))
-        if cmd == 'yes':
-            print('Quit!' * 500000)
-            running = False
-        elif cmd == 'no':
-                continue
-        elif cmd == 'hack':
-            print(' El Psy Congroo' * 100000)
-        else:
-            print('\n', "'",cmd,"'", 'is not an option. Why are you like this?\n')
+def quitting(woperator, soperator):
+    '''Quitting when not at main menu.'''
+    print("Are you sure? 'yes' or 'no'")
+    cmd = str(input("\nEnter command : "))
+    if cmd == 'yes':
+        print('Quit!' * 500000)
+        sys.exit(0)
+    elif cmd == 'no':
+        after_operation(woperator, soperator)
     elif cmd == 'hack':
-            print(' El Psy Congroo' * 100000)
+        steinsgate()
     else:
-        print('\n', "'",cmd,"'", 'is not an option\n')
+        print('\n', "'", cmd, "'", 'is not an option. Why are you like this?', '\n')
+
+def steinsgate():
+    '''Fun reference to Steins;Gate.'''
+    print(' El Psy Congroo' * 100000)
+
+def welcome():
+    '''Welcome message.'''
+    print('WELCOME TO SIMPLE CALCULATOR \nPlease have fun with this SIMPLE CALCULATOR.')
+
+welcome()
+main_menu()
