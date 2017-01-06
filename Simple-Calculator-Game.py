@@ -1,7 +1,7 @@
 import sys
 running = True
 choosing = True
-#def-functions branch
+
 def main_menu():
     '''Main menu options.'''
     while running:
@@ -106,4 +106,3 @@ def welcome():
 
 welcome()
 main_menu()
-
