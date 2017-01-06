@@ -1,6 +1,6 @@
 # Simple Calculator Game
 ## A fake calculator program 
-### For novice programmers who learned python: Try to recreate the program without looking at the code.
+### For novice programmers who learned python fundamentals and syntax: Try to recreate the program without looking at the code.
 This is TheKhangx's first attempt at creating a program.  
 Implementation of Loops, Conditionals, Functions, User Inputs, Exceptions and Humour.
 
