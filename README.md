@@ -1,10 +1,8 @@
 # Simple Calculator Game
 ## A fake calculator program 
-
-### For novice programmers who learned python: Try to recreate the program without looking at the code.
 This is my first attempt at creating a program.  
-Implementation of Loops, Conditionals, Functions, User Inputs, Exceptions and Humour.
-Run in command line.
+Implementation of Loops, Conditionals, Functions, User Inputs, Exceptions and Humour.  
+To be run in the command line.
 
 ### __Walkthrough__
 * Enter __text__ instead of numbers in math operations to get a message;
