@@ -2,7 +2,7 @@
 ## A fake calculator program 
 This is my first attempt at creating a program.  
 Implementation of Loops, Conditionals, Functions, User Inputs, Exceptions and Humour.  
-To be run in the command line.
+To be run in the command line. You need python3.
 
 ### __Walkthrough__
 * Enter __text__ instead of numbers in math operations to get a message;
