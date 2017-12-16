@@ -1,7 +1,7 @@
 # Simple Calculator Game
 ## A fake calculator program 
 My first attempt at creating a program with no formal education.  
-Implementating while Loops, Conditionals, Functions, User Inputs, Exceptions and Humour.  
+Implementating while loops, conditionals, functions, user inputs, exceptions and humour.  
 To be run in the command line. Python 3 is needed.
 
 ### __Walkthrough__
